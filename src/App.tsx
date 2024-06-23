@@ -1,33 +1,53 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { AlertTriangle, Ban, BellRing, CheckCheck, Info } from "lucide-react"
+import Alert from "./components/UI/Alert/Alert"
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Alert type="alert-danger" 
+      icon={<Ban size={20}/>} 
+      title="Something Went Wrong"
+      children={
+      <>
+          Lorem ipsum dolor sit <a href="">amet consectetur</a>  adipisicing elit. Sed veniam earum similique debitis praesentium dignissimos pariatur libero molestiae cum magnam iusto iste, labore dolor sint officia deserunt, cumque omnis! Aspernatur.
+      </>}
+      />
+      <Alert type="alert-default" 
+      icon={<BellRing size={20}/>} 
+      title="default alert"
+            children={
+      <>
+          Lorem ipsum dolor sit <a href="">amet consectetur</a>  adipisicing elit. Sed veniam earum similique debitis praesentium dignissimos pariatur libero molestiae cum magnam iusto iste, labore dolor sint officia deserunt, cumque omnis! Aspernatur.
+      </>}
+      />
+
+      <Alert type="alert-success" 
+      icon={<CheckCheck size={20}/>} 
+      title="success alert"
+            children={
+      <>
+          Lorem ipsum dolor sit <a href="">amet consectetur</a>  adipisicing elit. Sed veniam earum similique debitis praesentium dignissimos pariatur libero molestiae cum magnam iusto iste, labore dolor sint officia deserunt, cumque omnis! Aspernatur.
+      </>}
+      />
+
+      <Alert type="alert-warning" 
+      icon={<AlertTriangle size={20}/>} 
+      title="warning alert"
+            children={
+      <>
+          Lorem ipsum dolor sit <a href="">amet consectetur</a>  adipisicing elit. Sed veniam earum similique debitis praesentium dignissimos pariatur libero molestiae cum magnam iusto iste, labore dolor sint officia deserunt, cumque omnis! Aspernatur.
+      </>}
+      />
+
+      <Alert type="alert-info" 
+      icon={<Info size={20}/>} 
+      title="info alert"
+            children={
+      <>
+          Lorem ipsum dolor sit <a href="">amet consectetur</a>  adipisicing elit. Sed veniam earum similique debitis praesentium dignissimos pariatur libero molestiae cum magnam iusto iste, labore dolor sint officia deserunt, cumque omnis! Aspernatur.
+      </>}
+      />
     </>
   )
 }
